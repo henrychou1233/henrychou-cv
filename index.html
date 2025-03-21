@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Heng-Kun Chou Resume</title>
+  <title>Heng-Kunchou Resume</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -82,21 +82,21 @@
       right: 20px;
     }
     .profile-pic img {
-      max-width:100px; 
-      border-radius:50%;
-      cursor:pointer;
+      max-width: 100px;
+      border-radius: 50%;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <header>
     <!-- 預設顯示英文姓名，隱藏中文姓名 -->
-    <h1 id="name-en">HENG-KUN CHOU</h1>
+    <h1 id="name-en">HENG-KUNCHOU</h1>
     <h1 id="name-zh" style="display:none;">周亨昆</h1>
-
-    <!-- 副標題或簡短介紹，可根據需求調整 -->
+    
+    <!-- 副標題 -->
     <h2 id="subtitle">AI, Data Analytics, Smart Manufacturing</h2>
-
+    
     <!-- 聯絡資訊 -->
     <div class="contact-info">
       <span>Email: <a href="mailto:henrychou1233@gmail.com" style="color:#fff; text-decoration:none;">henrychou1233@gmail.com</a></span> | 
@@ -105,113 +105,95 @@
         <a href="https://www.linkedin.com/in/亨昆-周-988619247" target="_blank" style="color:#fff; text-decoration:none;">Profile</a>
       </span>
     </div>
-
-    <!-- 個人頭像區塊，若無需求可刪除 -->
+    
+    <!-- 個人頭像（如有） -->
     <div class="profile-pic">
       <img src="henry.jpg" alt="Profile Picture">
     </div>
   </header>
-
+  
   <div class="container">
-    <!-- 語言切換按鈕 -->
+    <!-- 語言切換 -->
     <div class="lang-switch">
       <span id="lang-label">Language:</span>
       <button onclick="switchLanguage('en')">English</button>
       <button onclick="switchLanguage('zh')">中文</button>
     </div>
-
-    <!-- 個人資料 -->
+    
+    <!-- 各區塊 -->
     <div class="section">
       <h3 id="personal-info-title"></h3>
       <div id="personal-info"></div>
     </div>
-
-    <!-- 個人簡介 -->
+    
     <div class="section">
       <h3 id="personal-statement-title"></h3>
       <div id="personal-statement"></div>
     </div>
-
-    <!-- 求職條件 -->
+    
     <div class="section">
       <h3 id="job-preferences-title"></h3>
       <div id="job-preferences"></div>
     </div>
     
-    <!-- 學歷 -->
     <div class="section">
       <h3 id="education-title"></h3>
       <div id="education"></div>
     </div>
     
-    <!-- 工作經驗 (含實習、全職、兼職) -->
     <div class="section">
       <h3 id="working-experience-title"></h3>
       <div id="working-experience"></div>
     </div>
-
-    <!-- 技術技能 -->
+    
     <div class="section">
       <h3 id="technical-skills-title"></h3>
       <div id="technical-skills"></div>
     </div>
     
-    <!-- 競賽與社團經驗 -->
     <div class="section">
       <h3 id="competition-club-title"></h3>
       <div id="competition-club"></div>
     </div>
     
-    <!-- 專案 -->
     <div class="section">
       <h3 id="projects-title"></h3>
       <div id="projects"></div>
     </div>
-
-    <!-- 相關修課 / 成就 -->
+    
     <div class="section">
       <h3 id="courses-title"></h3>
       <div id="courses"></div>
     </div>
-
-    <!-- 證照 -->
+    
     <div class="section">
       <h3 id="certificates-title"></h3>
       <div id="certificates"></div>
     </div>
-
-    <!-- 附件 -->
+    
     <div class="section">
       <h3 id="attachments-title"></h3>
       <div id="attachments"></div>
     </div>
-
-    <!-- 其他資訊或補充 -->
+    
     <div class="section">
       <h3 id="additional-info-title"></h3>
       <div id="additional-info"></div>
     </div>
   </div>
-
+  
   <script>
-    // 將所有中英文對應的內容，統一放在 data 物件中
+    // 將所有中英文對應的內容放在 data 物件中
     const data = {
       en: {
-        /* =========================
-           顯示於頁首的姓名與副標題
-           ========================= */
-        name: "HENG-KUN CHOU",
+        name: "HENG-KUNCHOU",
         subtitle: "AI, Data Analytics, Smart Manufacturing",
         langLabel: "Language:",
-
-        /* =========================
-           各區塊標題
-           ========================= */
         personalInfoTitle: "PERSONAL INFO",
         personalStatementTitle: "PERSONAL STATEMENT",
         jobPreferencesTitle: "JOB PREFERENCES",
         educationTitle: "EDUCATION",
-        workingExperienceTitle: "WORKING EXPERIENCE",
+        workingExperienceTitle: "INTERNSHIP EXPERIENCE",
         technicalSkillsTitle: "TECHNICAL SKILLS",
         competitionClubTitle: "COMPETITION & CLUB EXPERIENCE",
         projectsTitle: "PROJECTS",
@@ -219,291 +201,134 @@
         certificatesTitle: "CERTIFICATES",
         attachmentsTitle: "ATTACHMENTS",
         additionalInfoTitle: "ADDITIONAL INFO",
-
-        /* =========================
-           個人資料
-           ========================= */
         personalInfo: `
           <ul>
-            <li>Name (English): Heng-Kun Chou</li>
-            <li>Gender: Male, 25 years old, not yet served military</li>
-            <li>Current Employment Status: Employed (seeking R&D alternative military service)</li>
-            <li>Primary Phone: 0961-358-727</li>
+            <li>Name (English): Heng-Kunchou</li>
             <li>Email: <a href="mailto:henrychou1233@gmail.com">henrychou1233@gmail.com</a></li>
-            <li>Address: Xinyi District, Taipei City</li>
-            <li>Driver's License: Motorcycle, Automobile</li>
-            <li>Transportation: Motorcycle</li>
-            <li>LinkedIn: 
-              <a href="https://www.linkedin.com/in/亨昆-周-988619247" target="_blank">
-                https://www.linkedin.com/in/亨昆-周-988619247
-              </a>
-            </li>
-            <li>Personal Website: 
-              <a href="https://henrychou1233.github.io/henrychou-cv" target="_blank">
-                https://henrychou1233.github.io/henrychou-cv
-              </a>
-            </li>
+            <li>Phone: 0961358727</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/亨昆-周-988619247" target="_blank">https://www.linkedin.com/in/亨昆-周-988619247</a></li>
           </ul>
         `,
-
-        /* =========================
-           個人簡介
-           ========================= */
         personalStatement: `
 <p>
-I graduated from The Affiliated Senior High School of National Taiwan Normal University and earned a Statistics degree from National Taipei University, building a strong foundation in statistical methods. Currently, I am a second-year master’s student in the Institute of Technology Management at National Yang Ming Chiao Tung University, focusing on image recognition and the multifaceted applications of diffusion models, including anomaly detection (2D and 3D), image generation, object detection, semantic segmentation, multimodal tasks, and NLP.
+I graduated from The Affiliated Senior High School of National Taiwan Normal University and earned a Statistics degree from National Taipei University, building a strong foundation in statistical methods. Now a second-year master's student in Technology Management at National Yang Ming Chiao Tung University, I focus on image recognition and diffusion models for anomaly detection, image generation, object detection, and segmentation.
 </p>
 <p>
-My master’s thesis applies diffusion models in an unsupervised manner for 2D and 3D anomaly detection. I also utilize Stable Diffusion’s text prompt for data augmentation and integrate BLIP-2 to generate automated anomaly detection reports, aiming for breakthrough research results in this field.
+My thesis explores unsupervised 2D/3D anomaly detection using diffusion models, integrating Stable Diffusion for data augmentation and BLIP-2 for automated reporting. In summer 2024, I interned at Compal as an AI Algorithm Engineer, working on 2D/3D anomaly detection, segmentation, and image fusion. Since December 2024, I’ve been a Deep Learning Engineer intern at MediaTek, focusing on ESL signal analysis, Verilog/RTL, and LLM integration in chip design.
 </p>
 <p>
-During summer 2024, I interned at Compal as an AI Algorithm Engineer Intern, conducting experiments and model optimization for motherboard and production line anomaly detection. The scope included 2D/3D anomaly detection, semantic segmentation, object detection, and computer vision–related research. In collaboration with my advisor and international students from China, I also explored diffusion models for image fusion, particularly combining RGB and visible-light data.
-</p>
-<p>
-Since December 2024, I have been interning at MediaTek as a Deep Learning Engineer, working on ESL signal analysis, Verilog/RTL, and the integration of LLMs in chip design. I also employ automated approaches to verify the feasibility of Verilog on FPGA.
-</p>
-<p>
-To broaden my skill set, I have taken courses spanning industrial engineering, management science, interaction design, information management, communications, and transportation management. I completed 148 undergraduate credits and 64 master’s credits, maintaining a cumulative GPA of 4.16/4.3. I continue to seek opportunities in data analytics and AI to apply theoretical knowledge in practical contexts.
-</p>
-<p>
-Looking ahead, I hope to continually refine my expertise in data analytics, image processing, multimodal technology, AI algorithms, data engineering, smart manufacturing management, scheduling, and operations research, creating greater value for teams and industries.
+I’ve taken interdisciplinary courses in engineering, management, and design, completing 148 undergrad credits and 64 graduate credits with a GPA of 4.16/4.3. I aim to apply my expertise in AI, multimodal technologies, data analytics, and smart manufacturing to drive real-world impact.
 </p>
         `,
-
-        /* =========================
-           求職條件
-           ========================= */
         jobPreferences: `
           <ul>
-            <li>Seeking Full-time Position (or R&D alternative military service)</li>
-            <li>Willing to work day shift, night shift, weekend shift, or rotating shifts</li>
-            <li>Available to start within one week of offer</li>
-            <li>Expected Salary: Negotiable (following company regulations)</li>
-            <li>Preferred Work Locations: Taipei, New Taipei, Hsinchu, Taichung, Taoyuan</li>
-            <li>Open to Remote Work: Yes</li>
-            <li>Preferred Job Titles: Data Analyst, Smart Manufacturing Engineer, Data Scientist, AI Engineer, Data Engineer</li>
-            <li>Preferred Industries: Semiconductor, Software/Internet, Computer & Consumer Electronics Manufacturing, Telecommunications, Finance</li>
+            <li>Seeking full-time work (or R&D alternative military service)</li>
+            <li>Available for day, night, weekend, or rotating shifts</li>
+            <li>Can start within one week of offer</li>
+            <li>Salary: Negotiable according to company policy</li>
+            <li>Preferred Locations: Taipei, New Taipei, Hsinchu, Taichung, Taoyuan</li>
+            <li>Remote work: Yes</li>
+            <li>Desired Job Titles: Data Analyst, Smart Manufacturing Engineer, Data Scientist, AI Engineer, Data Engineer</li>
+            <li>Industries: Semiconductor, Software/Internet, Electronics Manufacturing, Telecommunications, Finance</li>
           </ul>
         `,
-
-        /* =========================
-           學歷
-           ========================= */
         education: `
           <ul>
             <li>
-              <strong>National Yang Ming Chiao Tung University</strong> (2023/5 ~ 2025/8)<br/>
-              Institute of Technology Management (Machine Learning, Deep Learning, Data Mining, Image Recognition, Multimodal NLP)
+              <strong>National Yang Ming Chiao Tung University, Hsinchu</strong> (2023/9 - present)<br/>
+              Institute of Technology Management (Data Mining, Image Recognition, Natural Language Processing, Multimodal Applications)
             </li>
             <li>
-              <strong>National Taipei University</strong> (2019/9 ~ 2023/6)<br/>
+              <strong>National Taipei University, New Taipei City</strong> (2019/9 - 2023/6)<br/>
               Department of Statistics (Statistical Theory, Mathematical Derivations, Data Analysis)
             </li>
             <li>
-              <strong>National Taiwan Normal University High School</strong> (2015/9 ~ 2018/6)<br/>
+              <strong>National Taiwan Normal University High School, Taipei</strong> (2015/9 - 2018/6)<br/>
               General Studies
             </li>
           </ul>
         `,
-
-        /* =========================
-           工作經驗 (含實習、全職、兼職)
-           ========================= */
         workingExperience: `
-          <h4>Deep Learning Engineer Intern — MediaTek (2024/12 ~ Present)</h4>
+          <h4>Deep Learning Engineer Intern — MediaTek (2024/12 - present)</h4>
           <ul>
             <li>Focus on ESL signal analysis, Verilog/RTL research, and LLM integration in chip design</li>
-            <li>Develop automated verification methods for Verilog applications on FPGA</li>
+            <li>Develop automated verification methods for Verilog on FPGA</li>
           </ul>
-
-          <h4>AI Algorithm Engineer Intern — Compal (2024/7 ~ 2024/8)</h4>
+          <h4>AI Algorithm Engineer Intern — Compal (2024/7 - 2024/8)</h4>
           <ul>
             <li>Optimized anomaly detection for computer motherboards and production lines (2D/3D anomaly detection, semantic segmentation, object detection)</li>
-            <li>Explored diffusion models, transformers, and Anomalib to improve accuracy</li>
-          </ul>
-
-          <h4>Participant — Kaggle (Flood Prediction Dataset) (2024/5 ~ 2024/5)</h4>
-          <ul>
-            <li>Final Ranking: 215 / 2788 (Top 7% globally)</li>
-          </ul>
-
-          <h4>Participant — Kaggle (Abalone Dataset) (2024/4 ~ 2024/4)</h4>
-          <ul>
-            <li>Used k-fold, Optuna, and ensemble methods</li>
-            <li>Final Ranking: 276 / 2606 (Top 11% globally)</li>
-          </ul>
-
-          <h4>Participant — Kaggle (Steel Plate Defect Prediction) (2024/2 ~ 2024/4)</h4>
-          <ul>
-            <li>Final Ranking: 432 / 2199 (Top 20% globally)</li>
-            <li>Predicted probabilities of seven defect categories on steel plates; used ROC AUC for evaluation</li>
-          </ul>
-
-          <h4>Attendee — TSMC 2024 Intelligent Manufacturing Workshop, Hsinchu (2024/3)</h4>
-          <ul>
-            <li>Focused on scheduling and creative proposals</li>
-            <li>Collaborated with team members from industrial engineering and management backgrounds</li>
-          </ul>
-
-          <h4>Research Associate — NTHU Management Consulting Club (2023/9 ~ 2024/6)</h4>
-          <ul>
-            <li>Engaged in peer learning, discussion, and industrial/data analysis</li>
-            <li>Established study groups to discuss management consulting topics</li>
-          </ul>
-
-          <h4>Participant — SinoPac AI House Price Prediction (2023/9 ~ 2023/11)</h4>
-          <ul>
-            <li>Employed Python and ML techniques (e.g., one-hot encoding, Random Forest, AdaBoost)</li>
-            <li>Final Ranking: 166 / 972 (Top 17% nationwide)</li>
-          </ul>
-
-          <h4>International Cultural Exchange — (NTPU, Tohoku University, Hirosaki University) (2023/8 ~ 2023/9)</h4>
-          <ul>
-            <li>English presentations and discussions among three universities</li>
-            <li>Shared cultural and academic insights between Taiwan and Japan</li>
-          </ul>
-
-          <h4>Tutor — A Local Cram School (2023/4 ~ 2023/5)</h4>
-          <ul>
-            <li>Managed students, assisted with homework, and completed assigned tasks</li>
-          </ul>
-
-          <h4>Store Clerk — S*** (2021/5 ~ 2021/9 & 2020/7 ~ 2020/8)</h4>
-          <ul>
-            <li>Sales of products and tasks assigned by the store manager</li>
-          </ul>
-
-          <h4>President — National Taipei University Statistics Department Student Association (2020/7 ~ 2021/8)</h4>
-          <ul>
-            <li>Led the student association, planned events, and managed finances</li>
-          </ul>
-
-          <h4>Assembler — TIBA (2016/7 ~ 2016/8 & 2015/7 ~ 2015/8)</h4>
-          <ul>
-            <li>Performed tasks such as screw fastening and fulfilling assignments from colleagues and supervisors</li>
+            <li>Researched diffusion models, transformers, and Anomalib to improve detection accuracy</li>
           </ul>
         `,
-
-        /* =========================
-           技術技能
-           ========================= */
         technicalSkills: `
           <p>
-            <strong>Programming & AI Skills:</strong><br/>
-            Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, PHP, C#, C, C++, JavaScript, HTML, CSS, phpMyAdmin, Minitab
+            <strong>Languages:</strong> Chinese, English (TOEIC 715, Cambridge PET and KET certified)
           </p>
           <p>
-            <strong>Operations Research:</strong><br/>
-            Lingo, Gurobi, Cplex
+            <strong>Programming Tools:</strong> Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, Lingo, C#, Cplex, Gurobi
           </p>
           <p>
-            <strong>Mathematical & Statistical Foundations:</strong><br/>
-            Solid background in advanced math, probability, and statistical inference
-          </p>
-          <p>
-            <strong>Office Software:</strong><br/>
-            Word, Excel, PowerPoint
-          </p>
-          <p>
-            <strong>Continuing Learning:</strong><br/>
-            MS SQL, VBA, advanced front-end web development, etc.
+            <strong>Software:</strong> Word, Excel, PowerPoint
           </p>
         `,
-
-        /* =========================
-           競賽與社團經驗
-           ========================= */
         competitionClub: `
           <ul>
-            <li>2024 National Intelligent Manufacturing Big Data Analysis Competition (2024/7 ~ 2024/8)</li>
-            <li>Served as Team Leader at TSMC 2024 Intelligent Manufacturing Workshop (2024/3)</li>
-            <li>NTHU Consulting Group – Industry & data analysis (2023/9 ~ 2024/6)</li>
-            <li>International Cultural Exchange (NTPU, Tohoku Univ., Hirosaki Univ.) (2023/8 ~ 2023/9)</li>
-            <li>President, NTPU Statistics Dept. Student Association (2020/7 ~ 2021/8)</li>
+            <li>2024 National Intelligent Manufacturing Big Data Analysis Competition (2024/7 - 2024/8)</li>
+            <li>Kaggle Competition: Regression with a Flood Prediction Dataset – Final Ranking: 215/2788, Top 7% globally</li>
+            <li>Kaggle Competition: Regression with an Abalone Dataset – Final Ranking: 276/2606, Top 11% globally</li>
+            <li>Kaggle Competition: Steel Plate Defect Prediction – Final Ranking: 432/2199, Top 20% globally</li>
+            <li>SinoPac AI House Price Prediction Competition – Final Ranking: 166/972, Top 17% nationwide</li>
+            <li>TSMC 2024 Intelligent Manufacturing Workshop (Hsinchu) – Served as Team Leader, completed a human-machine scheduling project and explored related topics (2024/3)</li>
+            <li>Research Associate, NTHU Management Consulting Club – Industry analysis, data analysis (2023/9 - 2024/6)</li>
+            <li>International Cultural Exchange Participant (National Taipei University, Tohoku University, Hirosaki University) – Engaged in English discussions and cross-cultural academic sharing (2023/8 - 2023/9)</li>
+            <li>President, National Taipei University Statistics Department Student Association – Leadership, planning, team collaboration, and event organization (2020/9 - 2021/6)</li>
           </ul>
         `,
-
-        /* =========================
-           專案
-           ========================= */
         projects: `
-          <h4>Universal Heuristic Algorithm - Bat Algorithm (2024/11 ~ 2024/12)</h4>
+          <h4>Universal Heuristic Algorithm – Bat Algorithm (2024/11 - 2024/12)</h4>
           <p>
-            Applying the Bat Algorithm to edge computing and comparing it with the Particle Swarm Optimization (PSO) algorithm.
-            <br/>
-            <a href="https://drive.google.com/file/d/1D02viWeycGGOomsrsqGNilWG3qwo0Hlx/view?usp=drive_link" target="_blank">
-              View PDF
-            </a>
+            Applying the Bat Algorithm to edge computing and comparing it with the Particle Swarm Optimization (PSO) algorithm.<br/>
+            <a href="https://drive.google.com/file/d/1D02viWeycGGOomsrsqGNilWG3qwo0Hlx/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
-
-          <h4>Medical Image Classification | Python (2024/5 ~ 2024/6)</h4>
+          <h4>Medical Image Classification | Python (2024/5 - 2024/6)</h4>
           <p>
-            Using models like VGG16, ResNet, and InceptionV3 to classify pneumonia in medical images, evaluated via confusion matrices.
-            <br/>
-            <a href="https://docs.google.com/presentation/d/1rXYSUL31uhZKdPK9TgtI7CE21licBJlh/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">
-              View Slides
-            </a>
+            Utilizing common AI models such as VGG16, ResNet, and InceptionV3 to compare their ability to classify pneumonia in medical images. The evaluation includes confusion matrix analysis.<br/>
+            <a href="https://docs.google.com/presentation/d/1rXYSUL31uhZKdPK9TgtI7CE21licBJlh/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">View Slides</a>
           </p>
-
-          <h4>Secondhand Market Website | HTML, CSS, JavaScript, PHP, MySQL (2024/4 ~ 2024/6)</h4>
+          <h4>Secondhand Market Website | HTML, CSS, JavaScript, PHP, MySQL (2024/4 - 2024/6)</h4>
           <p>
-            Developed a personal website with text, images, interactive features, and PHP integration for seamless page transitions.
+            Developing a personal website that includes text, images, and interactive effects, with PHP integration for seamless page transitions.
           </p>
-
-          <h4>Diffusion Research | Python (2023/11 ~ present)</h4>
+          <h4>Diffusion Research | Python (2023/11 - present)</h4>
           <p>
-            Starting from the DDPM paper, investigating improvements in denoising and UNet architecture, including potential applications in anomaly detection, super-resolution, and image restoration.
+            Starting with the Denoising Diffusion Probabilistic Models (DDPM) paper, investigating improvements in the denoising process and UNet architecture. Exploring applications in anomaly detection, super-resolution, and image restoration.
           </p>
-
-          <h4>Optimizing Anomaly Detection | Python, Linux (2023/11 ~ 2024/1)</h4>
+          <h4>Optimizing Anomaly Detection | Python, Linux (2023/11 - 2024/1)</h4>
           <p>
-            Built upon “Anomaly Detection with Conditioned Denoising Diffusion Models,” implementing modifications (noise types, feature extractors, up/down sampling in UNet, anomaly scoring formulas, loss functions, activation functions) to enhance AUROC. Reached top-five on the VisA dataset leaderboard (~98% AUROC).
-            <br/>
-            <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">
-              View Document
-            </a>
+            Building upon the "Anomaly Detection with Conditioned Denoising Diffusion Models" paper, implementing modifications (noise types, feature extractor backbones, UNet up/down sampling, anomaly scoring formulas, loss functions, and activation functions in residual blocks) to enhance AUROC. Achieved a top-five ranking on the VisA dataset leaderboard with an image AUROC close to 98%.<br/>
+            <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">View Document</a>
           </p>
-
-          <h4>Hsinchu Water Supply Network Reliability Study | Python (2023/11 ~ 2023/12)</h4>
+          <h4>Hsinchu Water Supply Network Reliability Study | Python (2023/11 - 2023/12)</h4>
           <p>
-            Applied maximum flow concepts to real-world pipeline data in Hsinchu. Used inclusion-exclusion principle to calculate reliability and proposed future improvements.
-            <br/>
-            <a href="https://docs.google.com/presentation/d/1ZTfmWpM1qE9q76aTBco2qqeOeS40OURL/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">
-              View Slides
-            </a>
+            Applying maximum flow concepts to analyze the reliability of Hsinchu's water supply system. Real-world data on pipelines and supply capacity were collected, and the inclusion-exclusion principle was used to calculate reliability and propose future adjustments.<br/>
+            <a href="https://docs.google.com/presentation/d/1ZTfmWpM1qE9q76aTBco2qqeOeS40OURL/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">View Slides</a>
           </p>
-
-          <h4>Deep Learning: Tesla Stock Prediction | Python (2023/11 ~ 2023/12)</h4>
+          <h4>Deep Learning: Tesla Stock Prediction | Python (2023/11 - 2023/12)</h4>
           <p>
-            Combined common market indicators, peer stock data, and open/close prices with sentiment scores (BERT). Used LSTM with parameter tuning to predict Tesla’s stock movements.
-            <br/>
-            <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">
-              View PDF
-            </a>
+            Using common stock market indicators, peer data, and open/close prices combined with sentiment scores extracted using BERT. Implementing LSTM as the core model and optimizing parameters to predict Tesla’s future stock price movements.<br/>
+            <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
-
-          <h4>NBA Player Performance Analysis | R, SAS (2022/3 ~ 2022/6)</h4>
+          <h4>NBA Player Performance Analysis | R, SAS (2022/3 - 2022/6)</h4>
           <p>
-            Used official NBA data with factor analysis, stepwise regression, and K-means clustering to group players, providing references for team management.
-            <br/>
-            <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">
-              View PDF
-            </a>
+            Utilizing official NBA statistics to conduct factor analysis, stepwise regression, and K-means clustering to classify players into optimal groups, providing insights for team management.<br/>
+            <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
-
-          <h4>Bivariate Function Plotting & Multivariable Function Parameter Estimation | Python (2022/4 ~ 2022/5)</h4>
+          <h4>Bivariate Function Plotting & Multivariable Function Parameter Estimation | Python (2022/4 - 2022/5)</h4>
           <p>
-            Simplified complex mathematical expressions before coding. Visualized mixed normal estimations and compared results (self-developed code vs. libraries) across varying sample sizes.
-            <br/>
-            <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">
-              View PDF
-            </a>
+            Simplifying complex mathematical expressions before implementing the computational program. Visualizing mixed normal estimation and comparing results from self-developed code and built-in libraries based on varying sample sizes.<br/>
+            <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
         `,
-
-        /* =========================
-           相關修課 / 成就
-           ========================= */
         courses: `
           <p>
             <strong>Relevant Coursework:</strong><br/>
@@ -532,10 +357,6 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
             Google Data Analytics Certificate, Google Ads certifications, etc.
           </p>
         `,
-
-        /* =========================
-           證照
-           ========================= */
         certificates: `
           <ul>
             <li>Google Ads Search Certification</li>
@@ -549,10 +370,6 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
             <li>Google Ads Evaluation Certification</li>
           </ul>
         `,
-
-        /* =========================
-           附件
-           ========================= */
         attachments: `
           <ul>
             <li>nycuitm_heng kun chou_resume.pdf</li>
@@ -563,10 +380,6 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
             <li>交大工工所_萬用啟發式演算法_蝙蝠演算法.pdf</li>
           </ul>
         `,
-
-        /* =========================
-           其他資訊或補充
-           ========================= */
         additionalInfo: `
           <p>
             <strong>Language Skills:</strong><br/>
@@ -580,26 +393,15 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
           </p>
         `
       },
-
-      /* ============================================================================================================
-         =============================================== 中文版本 ===============================================
-         ============================================================================================================ */
       zh: {
-        /* =========================
-           顯示於頁首的姓名與副標題
-           ========================= */
         name: "周亨昆",
         subtitle: "人工智慧、資料分析、智慧製造",
         langLabel: "語言：",
-
-        /* =========================
-           各區塊標題
-           ========================= */
         personalInfoTitle: "個人資料",
         personalStatementTitle: "自我介紹",
         jobPreferencesTitle: "求職條件",
         educationTitle: "學歷",
-        workingExperienceTitle: "工作經驗",
+        workingExperienceTitle: "實習經歷",
         technicalSkillsTitle: "技術技能",
         competitionClubTitle: "競賽與社團經驗",
         projectsTitle: "專案",
@@ -607,287 +409,138 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
         certificatesTitle: "證照",
         attachmentsTitle: "附件",
         additionalInfoTitle: "其他資訊",
-
-        /* =========================
-           個人資料
-           ========================= */
         personalInfo: `
           <ul>
             <li>中文姓名：周亨昆</li>
-            <li>性別：男，25歲，尚未服役</li>
-            <li>目前就業狀態：在職中（希望尋找研發替代役）</li>
-            <li>主要手機：0961-358-727</li>
             <li>電子信箱：<a href="mailto:henrychou1233@gmail.com">henrychou1233@gmail.com</a></li>
-            <li>通訊地址：台北市信義區信義路***</li>
-            <li>駕照：普通重型機車、普通小型車</li>
-            <li>交通工具：普通重型機車</li>
-            <li>LinkedIn：
-              <a href="https://www.linkedin.com/in/亨昆-周-988619247" target="_blank">
-                https://www.linkedin.com/in/亨昆-周-988619247
-              </a>
-            </li>
-            <li>個人履歷網站：
-              <a href="https://henrychou1233.github.io/henrychou-cv" target="_blank">
-                https://henrychou1233.github.io/henrychou-cv
-              </a>
-            </li>
+            <li>手機：0961358727</li>
+            <li>LinkedIn：<a href="https://www.linkedin.com/in/亨昆-周-988619247" target="_blank">https://www.linkedin.com/in/亨昆-周-988619247</a></li>
           </ul>
         `,
-
-        /* =========================
-           個人簡介
-           ========================= */
         personalStatement: `
 <p>
-我畢業於國立臺灣師範大學附屬高中，就讀國立臺北大學統計學系期間奠定了扎實的統計基礎。目前於國立陽明交通大學科技管理研究所攻讀碩士二年級，研究室主要聚焦影像辨識領域，並專注於擴散模型（Diffusion Models）的多元應用，包括異常偵測（2D與3D）、圖像生成、物件偵測、語意分割、多模態任務與自然語言處理。
+我畢業於國立臺灣師範大學附屬高中，並在國立臺北大學取得統計學位，奠定了堅實的統計方法基礎。現為國立陽明交通大學科技管理研究所碩士二年級學生，專注於影像辨識及擴散模型在異常偵測、圖像生成、物件偵測與分割方面的應用。
 </p>
 <p>
-我的碩士論文以非監督方式結合擴散模型，進行2D與3D異常偵測，並透過Stable Diffusion的文字提示（prompt）進行資料增強，最後串聯多模態模型（BLIP-2）自動生成異常偵測報告，期望能在此領域取得突破性成果。
+我的論文探討利用擴散模型進行無監督的2D/3D異常偵測，結合Stable Diffusion進行資料增強，並採用BLIP-2自動生成異常偵測報告，期望能在此領域取得突破性成果。2024年夏，我在仁寶擔任AI演算法工程師實習生，進行2D/3D異常偵測、分割及影像融合工作；自2024年12月起，我在聯發科技擔任深度學習工程師實習生，主要從事ESL訊號分析、Verilog/RTL研究及LLM在晶片設計中的整合。
 </p>
 <p>
-2024年暑假期間，我在仁寶電腦擔任AI演算法工程師實習生，負責主機板與生產線的異常偵測實驗與模型優化工作，涵蓋2D與3D異常偵測、語意分割及物件偵測等，也參與電腦視覺相關的論文研究。與此同時，亦與指導教授及國外學生（中國）合作，研究擴散模型於影像融合的應用（結合RGB與可見光影像）。
-</p>
-<p>
-自2024年12月起，我於聯發科技擔任深度學習工程師實習生，主要處理ESL訊號分析、Verilog/RTL，以及LLM應用於晶片設計的相關研究，也透過自動化方式驗證Verilog在FPGA上的可行性。
-</p>
-<p>
-為了拓展跨領域知識，我積極修習工業工程、管理科學、互動設計、資訊管理、通訊及運輸管理等課程，大學期間累積148學分，碩士已修64學分，GPA達4.16/4.3。我也持續尋求更多數據分析及人工智慧相關的實務機會，將理論應用於實際情境。
-</p>
-<p>
-未來，我希望能在數據分析、影像處理、多模態技術、AI演算法、數據工程、智慧製造管理、排程與作業研究等領域持續精進，為團隊與產業創造更大價值。
+我修習了工程、管理與設計等跨領域課程，大學累積148學分，碩士已修64學分，GPA達4.16/4.3。我期望運用在人工智慧、多模態技術、資料分析及智慧製造方面的專業知識，為實際應用帶來深遠影響。
 </p>
         `,
-
-        /* =========================
-           求職條件
-           ========================= */
         jobPreferences: `
           <ul>
             <li>希望從事全職工作（或研發替代役）</li>
-            <li>可配合日班、晚班、假日班、輪班</li>
+            <li>可配合日班、晚班、假日班及輪班</li>
             <li>錄取後一週內可到職</li>
-            <li>待遇：依公司規定 / 可議</li>
-            <li>希望地點：台北市、新北市、新竹縣市、台中市、桃園市</li>
+            <li>待遇：依公司規定，另議</li>
+            <li>希望工作地點：台北、新北、新竹、台中、桃園</li>
             <li>對遠端工作有意願</li>
             <li>期望職稱：數據分析師、智慧製造工程師、資料科學家、AI工程師、數據工程師</li>
-            <li>期望產業：半導體業、軟體及網路相關業、電腦及消費性電子製造業、電信通訊、金融相關</li>
+            <li>期望產業：半導體、軟體/網路、電腦與消費性電子製造、電信、金融</li>
           </ul>
         `,
-
-        /* =========================
-           學歷
-           ========================= */
         education: `
           <ul>
             <li>
-              <strong>國立陽明交通大學</strong> (2023/5 ~ 2025/8)<br/>
-              科技管理研究所（機器學習、深度學習、資料探勘、影像辨識、多模態自然語言處理）
+              <strong>國立陽明交通大學，新竹</strong>（2023/9 至今）<br/>
+              科技管理研究所（資料探勘、影像辨識、自然語言處理、多模態應用）
             </li>
             <li>
-              <strong>國立臺北大學</strong> (2019/9 ~ 2023/6)<br/>
+              <strong>國立臺北大學，新北市</strong>（2019/9 - 2023/6）<br/>
               統計學系（統計理論、數學推導、資料分析）
             </li>
             <li>
-              <strong>國立臺灣師範大學附屬高中</strong> (2015/9 ~ 2018/6)<br/>
+              <strong>國立臺灣師範大學附屬高中，臺北</strong>（2015/9 - 2018/6）<br/>
               普通科
             </li>
           </ul>
         `,
-
-        /* =========================
-           工作經驗 (含實習、全職、兼職)
-           ========================= */
         workingExperience: `
-          <h4>深度學習工程師intern — 聯發科技 (2024/12 ~ 仍在職)</h4>
+          <h4>深度學習工程師實習生 — 聯發科技（2024/12 至今）</h4>
           <ul>
-            <li>專注於ESL訊號分析、Verilog/RTL研究及LLM應用於晶片設計</li>
-            <li>透過自動化方式驗證Verilog於FPGA上的可行性</li>
+            <li>專注於ESL訊號分析、Verilog/RTL研究及LLM在晶片設計中的整合</li>
+            <li>透過自動化驗證Verilog於FPGA上的可行性</li>
           </ul>
-
-          <h4>AI演算法工程師intern — 仁寶電腦 (2024/7 ~ 2024/8)</h4>
+          <h4>AI演算法工程師實習生 — 仁寶（2024/7 - 2024/8）</h4>
           <ul>
-            <li>優化主機板與產線異常偵測（2D、3D異常偵測、語意分割、物件偵測）</li>
-            <li>研究diffusion、transformer、anomalib以提升偵測準確率</li>
-          </ul>
-
-          <h4>參賽者 — Kaggle洪水預測 (2024/5 ~ 2024/5)</h4>
-          <ul>
-            <li>最終排名：215 / 2788（全球前7%）</li>
-          </ul>
-
-          <h4>參賽者 — Kaggle鮑魚資料 (2024/4 ~ 2024/4)</h4>
-          <ul>
-            <li>使用k折驗證、Optuna調參及集成學習</li>
-            <li>最終排名：276 / 2606（全球前11%）</li>
-          </ul>
-
-          <h4>參賽者 — Kaggle鋼板缺陷預測 (2024/2 ~ 2024/4)</h4>
-          <ul>
-            <li>最終排名：432 / 2199（全球前20%）</li>
-            <li>預測鋼板上7種缺陷類別的概率，以AUC為評估標準</li>
-          </ul>
-
-          <h4>學員 — TSMC 2024智慧製造工作坊 (新竹) (2024/3)</h4>
-          <ul>
-            <li>排程與創意提案競賽</li>
-            <li>與工業工程與管理背景同儕進行交流</li>
-          </ul>
-
-          <h4>研習生 — 清華大學管理顧問社 (2023/9 ~ 2024/6)</h4>
-          <ul>
-            <li>與同儕交流學習，進行產業與資料分析</li>
-            <li>定期讀書會討論管理顧問相關議題</li>
-          </ul>
-
-          <h4>參賽者 — 永豐AI房價預測 (2023/9 ~ 2023/11)</h4>
-          <ul>
-            <li>運用Python及ML方法（one-hot編碼、隨機森林、AdaBoost）</li>
-            <li>最終排名：166 / 972（全國前17%）</li>
-          </ul>
-
-          <h4>國際文化交流 — 北大、東北大學、弘前大學 (2023/8 ~ 2023/9)</h4>
-          <ul>
-            <li>以英文對談並製作簡報，進行文化與學術分享</li>
-          </ul>
-
-          <h4>帶班/解題老師 — 第一志願補習班 (2023/4 ~ 2023/5)</h4>
-          <ul>
-            <li>管理學生、輔導課業、完成教職人員交辦任務</li>
-          </ul>
-
-          <h4>店職員 — 聖德科斯莊敬門市 (2021/5 ~ 2021/9 & 2020/7 ~ 2020/8)</h4>
-          <ul>
-            <li>銷售商品，完成店長交辦任務</li>
-          </ul>
-
-          <h4>會長 — 國立臺北大學統計學系系學會 (2020/7 ~ 2021/8)</h4>
-          <ul>
-            <li>社團領導與管理、活動規劃、財務管理</li>
-          </ul>
-
-          <h4>基層員工 — 鉄霸TIBA (2016/7 ~ 2016/8 & 2015/7 ~ 2015/8)</h4>
-          <ul>
-            <li>鎖螺絲，完成老闆與同事交辦任務</li>
+            <li>優化主機板與生產線異常偵測（2D與3D異常偵測、語意分割、物件偵測）</li>
+            <li>研究擴散模型、Transformer及Anomalib以提升偵測準確率</li>
           </ul>
         `,
-
-        /* =========================
-           技術技能
-           ========================= */
         technicalSkills: `
           <p>
-            <strong>程式 & AI 技能：</strong><br/>
-            Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, PHP, C#, C, C++, JavaScript, HTML, CSS, phpMyAdmin, Minitab
+            <strong>語言：</strong>中文、英文（TOEIC 715，劍橋PET及KET認證）
           </p>
           <p>
-            <strong>作業研究：</strong><br/>
-            Lingo, Gurobi, Cplex
+            <strong>程式語言/工具：</strong>Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, Lingo, C#, Cplex, Gurobi
           </p>
           <p>
-            <strong>數學與統計基礎：</strong><br/>
-            高等數學、機率、統計推論
-          </p>
-          <p>
-            <strong>辦公室軟體：</strong><br/>
-            Word, Excel, PowerPoint
-          </p>
-          <p>
-            <strong>持續學習：</strong><br/>
-            MS SQL, VBA, 前端網頁開發等
+            <strong>軟體：</strong>Word, Excel, PowerPoint
           </p>
         `,
-
-        /* =========================
-           競賽與社團經驗
-           ========================= */
         competitionClub: `
           <ul>
-            <li>2024全國智慧製造大數據分析競賽 (2024/7 ~ 2024/8)</li>
-            <li>TSMC 2024智慧製造工作坊擔任組長 (2024/3)</li>
-            <li>清華大學管理顧問社 – 產業分析、資料分析 (2023/9 ~ 2024/6)</li>
-            <li>國際文化交流（北大、東北大學、弘前大學） (2023/8 ~ 2023/9)</li>
-            <li>國立臺北大學統計學系學生會會長 (2020/7 ~ 2021/8)</li>
+            <li>2024全國智慧製造大數據分析競賽（2024/7 - 2024/8）</li>
+            <li>Kaggle競賽：洪水預測資料迴歸 – 最終排名：215/2788，全球前7%</li>
+            <li>Kaggle競賽：鮑魚資料迴歸 – 最終排名：276/2606，全球前11%</li>
+            <li>Kaggle競賽：鋼板缺陷預測 – 最終排名：432/2199，全球前20%</li>
+            <li>永豐AI房價預測競賽 – 最終排名：166/972，全國前17%</li>
+            <li>TSMC 2024智慧製造工作坊（新竹）– 擔任組長，完成人機排程專案並探討相關議題（2024/3）</li>
+            <li>清華大學管理顧問社研究助理 – 產業與資料分析（2023/9 - 2024/6）</li>
+            <li>國際文化交流參與者（國立臺北大學、東北大學、弘前大學）– 以英文討論與分享跨文化學術成果（2023/8 - 2023/9）</li>
+            <li>國立臺北大學統計學系學生會會長 – 領導、規劃、團隊協作及活動組織（2020/9 - 2021/6）</li>
           </ul>
         `,
-
-        /* =========================
-           專案
-           ========================= */
         projects: `
-          <h4>萬用啟發式演算法 - 蝙蝠演算法 (2024/11 ~ 2024/12)</h4>
+          <h4>萬用啟發式演算法 - 蝙蝠演算法（2024/11 - 2024/12）</h4>
           <p>
-            利用蝙蝠演算法應用於邊緣運算，並與粒子群演算法（PSO）做比較。<br/>
-            <a href="https://drive.google.com/file/d/1D02viWeycGGOomsrsqGNilWG3qwo0Hlx/view?usp=drive_link" target="_blank">
-              檔案連結
-            </a>
+            將蝙蝠演算法應用於邊緣運算，並與粒子群演算法（PSO）進行比較。<br/>
+            <a href="https://drive.google.com/file/d/1D02viWeycGGOomsrsqGNilWG3qwo0Hlx/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
-
-          <h4>醫療影像分類 | Python (2024/5 ~ 2024/6)</h4>
+          <h4>醫療影像分類 | Python（2024/5 - 2024/6）</h4>
           <p>
-            利用VGG16、ResNet、InceptionV3等模型比較區分肺炎影像的能力，並透過混淆矩陣評估。<br/>
-            <a href="https://docs.google.com/presentation/d/1rXYSUL31uhZKdPK9TgtI7CE21licBJlh/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">
-              投影片連結
-            </a>
+            利用VGG16、ResNet、InceptionV3等模型比較分類肺炎醫療影像的能力，並透過混淆矩陣進行評估。<br/>
+            <a href="https://docs.google.com/presentation/d/1rXYSUL31uhZKdPK9TgtI7CE21licBJlh/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">投影片連結</a>
           </p>
-
-          <h4>二手拍網站 | HTML, CSS, JavaScript, PHP, MySQL (2024/4 ~ 2024/6)</h4>
+          <h4>二手拍網站 | HTML, CSS, JavaScript, PHP, MySQL（2024/4 - 2024/6）</h4>
           <p>
-            製作個人網站，包含文字、圖片、互動特效，並與PHP整合實現頁面之間的靈活切換。
+            開發個人網站，包含文字、圖片及互動效果，並透過PHP實現頁面間無縫切換。
           </p>
-
-          <h4>Diffusion研究 | Python (2023/11 ~ 至今)</h4>
+          <h4>擴散模型研究 | Python（2023/11 - 至今）</h4>
           <p>
-            以DDPM論文為起點，探討降噪過程及UNet架構的改進，應用於異常偵測、超解析度、影像修復等領域。
+            以DDPM論文為起點，探討降噪過程及UNet架構改進，並研究擴散模型在異常偵測、超解析度和影像修復上的應用。
           </p>
-
-          <h4>優化異常偵測 | Python, Linux (2023/11 ~ 2024/1)</h4>
+          <h4>優化異常偵測 | Python, Linux（2023/11 - 2024/1）</h4>
           <p>
-            以“Anomaly Detection with Conditioned Denoising Diffusion Models”為基礎，針對上噪種類、特徵擷取器、UNet上下採樣、異常分數公式、損失函數、激活函數等進行改良，最終在VisA資料集排行榜拿下前五，影像AUROC約98%。<br/>
-            <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">
-              檔案連結
-            </a>
+            基於「Anomaly Detection with Conditioned Denoising Diffusion Models」論文，針對上噪種類、特徵擷取器、UNet上下採樣策略、異常分數公式、損失函數及殘差塊激活函數進行改良，最終在VisA資料集排行榜中取得前五，影像AUROC約98%。<br/>
+            <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
-
-          <h4>大新竹供水網路可靠度研究 | Python (2023/11 ~ 2023/12)</h4>
+          <h4>新竹供水網路可靠度研究 | Python（2023/11 - 2023/12）</h4>
           <p>
-            應用最大流量與排容原理，分析新竹地區實際水管與供水量，計算整體供水可靠度並提出未來調整方向。<br/>
-            <a href="https://docs.google.com/presentation/d/1ZTfmWpM1qE9q76aTBco2qqeOeS40OURL/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">
-              投影片連結
-            </a>
+            運用最大流量與排容原理，分析新竹地區供水系統的可靠度，收集實際管線及供水數據，並提出未來調整方向。<br/>
+            <a href="https://docs.google.com/presentation/d/1ZTfmWpM1qE9q76aTBco2qqeOeS40OURL/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">投影片連結</a>
           </p>
-
-          <h4>深度學習：Tesla股價預測 | Python (2023/11 ~ 2023/12)</h4>
+          <h4>深度學習：Tesla股價預測 | Python（2023/11 - 2023/12）</h4>
           <p>
-            使用常見指標、同類股、開收盤等數據，結合BERT計算的新聞情緒分數，以LSTM為核心模型進行參數優化，預測未來特斯拉股價漲跌幅。<br/>
-            <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">
-              檔案連結
-            </a>
+            結合常見市場指標、同業數據及開收盤價，並利用BERT提取新聞情緒分數，以LSTM為核心模型進行參數優化，預測特斯拉未來股價走勢。<br/>
+            <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
-
-          <h4>NBA球員表現分析 | R, SAS (2022/3 ~ 2022/6)</h4>
+          <h4>NBA球員表現分析 | R, SAS（2022/3 - 2022/6）</h4>
           <p>
-            從NBA官網取得資料，使用因素分析、逐步迴歸、K-means分群等方法進行球員分類，結果可提供球團參考。<br/>
-            <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">
-              檔案連結
-            </a>
+            利用NBA官方統計數據，通過因素分析、逐步迴歸及K-means分群對球員進行分類，為球隊管理提供參考。<br/>
+            <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
-
-          <h4>雙變量函數繪圖 & 多變量函數參數估計 | Python (2022/4 ~ 2022/5)</h4>
+          <h4>雙變量函數繪圖 & 多變量函數參數估計 | Python（2022/4 - 2022/5）</h4>
           <p>
-            先將複雜數學式簡化後，再撰寫程式，將混和常態估計可視化，並透過不同樣本量比較自寫程式與套件的結果差異。<br/>
-            <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">
-              檔案連結
-            </a>
+            先將複雜數學表達式簡化，再撰寫程式進行計算，將混合常態估計結果可視化，並比較自寫程式與現成函式庫在不同樣本量下的表現差異。<br/>
+            <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
         `,
-
-        /* =========================
-           相關修課 / 成就
-           ========================= */
         courses: `
           <p>
             <strong>相關修課：</strong><br/>
-            統計學、機率、統計推論、數理統計、微積分、線性代數、電腦概論與程式設計、迴歸分析、統計計算、生物統計、財務報表分析、統計諮詢、資料分析、實驗設計、抽樣調查、隨機過程、使用者經驗、深度學習、網路可靠度、多變量分析、資料探勘與實務、高等作業研究、資料庫管理、機器學習演算法、高科技產品管理、離散數學、智慧型運輸系統、萬用啟發式演算法、可解釋AI應用於製造業等。
+            統計學、機率、統計推論、數理統計、微積分、線性代數、程式設計、迴歸分析、統計計算、生物統計、財務報表分析、統計諮詢、資料分析、實驗設計、抽樣調查、隨機過程、使用者經驗、深度學習、網路可靠度、多變量分析、資料探勘、作業研究、資料庫管理、機器學習演算法、高科技產品管理、離散數學、智慧型運輸系統、萬用啟發式演算法、可解釋AI在製造業應用等。
           </p>
           <p>
             <strong>獎助學金：</strong><br/>
@@ -895,13 +548,13 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
           </p>
           <p>
             <strong>碩士成績：</strong><br/>
-            碩一下：GPA 4.15 / 4.3<br/>
-            碩二上：GPA 4.17 / 4.3
+            碩一：GPA 4.15 / 4.3<br/>
+            碩二：GPA 4.17 / 4.3
           </p>
           <p>
             <strong>Coursera證書（持續進行中）：</strong><br/>
-            機器學習、數學基礎、Bayesian Statistics、Supply Chain Analytics、Business Analysis & Process Management、Data Science Math Skills、PyCaret異常偵測、Management Consulting、SEO等。<br/>
-            IBM Data Analyst、IBM Data Science、Google Data Analytics、Google Advanced Data Analytics、TensorFlow 2 for Deep Learning、Python for Everybody...等。
+            機器學習、數學基礎、Bayesian Statistics、Supply Chain Analytics、Business Analysis & Process Management、Data Science Math Skills、PyCaret異常偵測、Management Consulting、SEO 等。<br/>
+            IBM Data Analyst、IBM Data Science、Google Data Analytics、Google Advanced Data Analytics、TensorFlow 2 for Deep Learning、Python for Everybody 等。
           </p>
           <p>
             <strong>AWS Academy Graduate — AWS Academy Introduction to Cloud Semester 1</strong><br/>
@@ -909,30 +562,22 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
           </p>
           <p>
             <strong>其他進修中：</strong><br/>
-            Google Data Analytics、Google Ads認證等。
+            Google Data Analytics、Google Ads 認證等。
           </p>
         `,
-
-        /* =========================
-           證照
-           ========================= */
         certificates: `
           <ul>
-            <li>Google Ads 搜尋廣告認證</li>
-            <li>Google Ads 多媒體廣告認證</li>
-            <li>Google Ads 影片廣告認證</li>
-            <li>Google Shopping Ads 認證</li>
-            <li>Google Analytics 個人認證</li>
-            <li>Google Ads Apps 認證</li>
-            <li>Google Ads Creative 認證</li>
-            <li>AI-Powered Performance Ads 認證</li>
-            <li>Google Ads 評估認證</li>
+            <li>Google Ads Search Certification</li>
+            <li>Google Ads Display Certification</li>
+            <li>Google Ads Video Certification</li>
+            <li>Google Shopping Ads Certification</li>
+            <li>Google Analytics Individual Qualification</li>
+            <li>Google Ads Apps Certification</li>
+            <li>Google Ads Creative Certification</li>
+            <li>AI-Powered Performance Ads Certification</li>
+            <li>Google Ads Evaluation Certification</li>
           </ul>
         `,
-
-        /* =========================
-           附件
-           ========================= */
         attachments: `
           <ul>
             <li>nycuitm_heng kun chou_resume.pdf</li>
@@ -943,40 +588,33 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
             <li>交大工工所_萬用啟發式演算法_蝙蝠演算法.pdf</li>
           </ul>
         `,
-
-        /* =========================
-           其他資訊或補充
-           ========================= */
         additionalInfo: `
           <p>
             <strong>語文能力：</strong><br/>
             英文（聽/中等、說/中等、讀/中等、寫/中等）<br/>
             TOEIC: 715<br/>
-            劍橋英語：KET、PET
+            劍橋英語：KET, PET
           </p>
           <p>
             <strong>未來規劃：</strong><br/>
-            希望能在數據分析、AI、多模態技術、排程與作業研究等領域持續學習與貢獻，也樂於從事資料工程、智慧製造等相關職務。
+            希望能在資料分析、人工智慧、多模態技術、排程與作業研究等領域持續學習與貢獻，並從事資料工程、智慧製造等相關工作。
           </p>
         `
       }
     };
 
-    // 切換語言的函式
     function switchLanguage(lang) {
       const d = data[lang];
-
-      // 切換顯示的姓名
+      
+      // 切換姓名顯示
       document.getElementById("name-en").style.display = (lang === 'en') ? 'block' : 'none';
       document.getElementById("name-zh").style.display = (lang === 'zh') ? 'block' : 'none';
-
-      // 副標題
+      
+      // 副標題與語言標籤
       document.getElementById("subtitle").textContent = d.subtitle;
-
-      // 語言切換標籤
       document.getElementById("lang-label").textContent = d.langLabel;
-
-      // 區塊標題
+      
+      // 各區塊標題
       document.getElementById("personal-info-title").textContent = d.personalInfoTitle;
       document.getElementById("personal-statement-title").textContent = d.personalStatementTitle;
       document.getElementById("job-preferences-title").textContent = d.jobPreferencesTitle;
@@ -989,8 +627,8 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
       document.getElementById("certificates-title").textContent = d.certificatesTitle;
       document.getElementById("attachments-title").textContent = d.attachmentsTitle;
       document.getElementById("additional-info-title").textContent = d.additionalInfoTitle;
-
-      // 內容
+      
+      // 各區塊內容
       document.getElementById("personal-info").innerHTML = d.personalInfo;
       document.getElementById("personal-statement").innerHTML = d.personalStatement;
       document.getElementById("job-preferences").innerHTML = d.jobPreferences;
@@ -1004,7 +642,7 @@ Looking ahead, I hope to continually refine my expertise in data analytics, imag
       document.getElementById("attachments").innerHTML = d.attachments;
       document.getElementById("additional-info").innerHTML = d.additionalInfo;
     }
-
+    
     // 預設顯示英文版本
     switchLanguage('en');
   </script>
