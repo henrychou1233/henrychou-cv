@@ -106,7 +106,7 @@
       </span>
     </div>
     
-    <!-- 個人頭像（如有） -->
+    <!-- 個人頭像 -->
     <div class="profile-pic">
       <img src="henry.jpg" alt="Profile Picture">
     </div>
@@ -120,70 +120,57 @@
       <button onclick="switchLanguage('zh')">中文</button>
     </div>
     
-    <!-- 各區塊 -->
+    <!-- 個人資料 -->
     <div class="section">
       <h3 id="personal-info-title"></h3>
       <div id="personal-info"></div>
     </div>
     
+    <!-- 個人簡介 -->
     <div class="section">
       <h3 id="personal-statement-title"></h3>
       <div id="personal-statement"></div>
     </div>
     
-    <div class="section">
-      <h3 id="job-preferences-title"></h3>
-      <div id="job-preferences"></div>
-    </div>
-    
+    <!-- 學歷 -->
     <div class="section">
       <h3 id="education-title"></h3>
       <div id="education"></div>
     </div>
     
+    <!-- 工作經驗 -->
     <div class="section">
       <h3 id="working-experience-title"></h3>
       <div id="working-experience"></div>
     </div>
     
+    <!-- 技術技能 -->
     <div class="section">
       <h3 id="technical-skills-title"></h3>
       <div id="technical-skills"></div>
     </div>
     
+    <!-- 競賽與社團經驗 -->
     <div class="section">
       <h3 id="competition-club-title"></h3>
       <div id="competition-club"></div>
     </div>
     
+    <!-- 專案 -->
     <div class="section">
       <h3 id="projects-title"></h3>
       <div id="projects"></div>
     </div>
     
+    <!-- 相關修課 / 成就 -->
     <div class="section">
       <h3 id="courses-title"></h3>
       <div id="courses"></div>
     </div>
-    
-    <div class="section">
-      <h3 id="certificates-title"></h3>
-      <div id="certificates"></div>
-    </div>
-    
-    <div class="section">
-      <h3 id="attachments-title"></h3>
-      <div id="attachments"></div>
-    </div>
-    
-    <div class="section">
-      <h3 id="additional-info-title"></h3>
-      <div id="additional-info"></div>
-    </div>
   </div>
   
   <script>
-    // 將所有中英文對應的內容放在 data 物件中
+    // 所有中英文對應的內容，已移除證照、附件、其他資訊及求職條件區塊
     const data = {
       en: {
         name: "HENG-KUNCHOU",
@@ -191,16 +178,12 @@
         langLabel: "Language:",
         personalInfoTitle: "PERSONAL INFO",
         personalStatementTitle: "PERSONAL STATEMENT",
-        jobPreferencesTitle: "JOB PREFERENCES",
         educationTitle: "EDUCATION",
         workingExperienceTitle: "INTERNSHIP EXPERIENCE",
         technicalSkillsTitle: "TECHNICAL SKILLS",
         competitionClubTitle: "COMPETITION & CLUB EXPERIENCE",
         projectsTitle: "PROJECTS",
         coursesTitle: "COURSES & ACHIEVEMENTS",
-        certificatesTitle: "CERTIFICATES",
-        attachmentsTitle: "ATTACHMENTS",
-        additionalInfoTitle: "ADDITIONAL INFO",
         personalInfo: `
           <ul>
             <li>Name (English): Heng-Kunchou</li>
@@ -219,18 +202,6 @@ My thesis explores unsupervised 2D/3D anomaly detection using diffusion models, 
 <p>
 I’ve taken interdisciplinary courses in engineering, management, and design, completing 148 undergrad credits and 64 graduate credits with a GPA of 4.16/4.3. I aim to apply my expertise in AI, multimodal technologies, data analytics, and smart manufacturing to drive real-world impact.
 </p>
-        `,
-        jobPreferences: `
-          <ul>
-            <li>Seeking full-time work (or R&D alternative military service)</li>
-            <li>Available for day, night, weekend, or rotating shifts</li>
-            <li>Can start within one week of offer</li>
-            <li>Salary: Negotiable according to company policy</li>
-            <li>Preferred Locations: Taipei, New Taipei, Hsinchu, Taichung, Taoyuan</li>
-            <li>Remote work: Yes</li>
-            <li>Desired Job Titles: Data Analyst, Smart Manufacturing Engineer, Data Scientist, AI Engineer, Data Engineer</li>
-            <li>Industries: Semiconductor, Software/Internet, Electronics Manufacturing, Telecommunications, Finance</li>
-          </ul>
         `,
         education: `
           <ul>
@@ -292,40 +263,40 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
           </p>
           <h4>Medical Image Classification | Python (2024/5 - 2024/6)</h4>
           <p>
-            Utilizing common AI models such as VGG16, ResNet, and InceptionV3 to compare their ability to classify pneumonia in medical images. The evaluation includes confusion matrix analysis.<br/>
+            Utilizing common AI models such as VGG16, ResNet, and InceptionV3 to compare their ability to classify pneumonia in medical images. Evaluation includes confusion matrix analysis.<br/>
             <a href="https://docs.google.com/presentation/d/1rXYSUL31uhZKdPK9TgtI7CE21licBJlh/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">View Slides</a>
           </p>
           <h4>Secondhand Market Website | HTML, CSS, JavaScript, PHP, MySQL (2024/4 - 2024/6)</h4>
           <p>
-            Developing a personal website that includes text, images, and interactive effects, with PHP integration for seamless page transitions.
+            Developing a personal website that includes text, images, and interactive effects with PHP integration for seamless page transitions.
           </p>
           <h4>Diffusion Research | Python (2023/11 - present)</h4>
           <p>
-            Starting with the Denoising Diffusion Probabilistic Models (DDPM) paper, investigating improvements in the denoising process and UNet architecture. Exploring applications in anomaly detection, super-resolution, and image restoration.
+            Starting with the DDPM paper, investigating improvements in the denoising process and UNet architecture, and exploring applications in anomaly detection, super-resolution, and image restoration.
           </p>
           <h4>Optimizing Anomaly Detection | Python, Linux (2023/11 - 2024/1)</h4>
           <p>
-            Building upon the "Anomaly Detection with Conditioned Denoising Diffusion Models" paper, implementing modifications (noise types, feature extractor backbones, UNet up/down sampling, anomaly scoring formulas, loss functions, and activation functions in residual blocks) to enhance AUROC. Achieved a top-five ranking on the VisA dataset leaderboard with an image AUROC close to 98%.<br/>
+            Building upon "Anomaly Detection with Conditioned Denoising Diffusion Models," implementing modifications (noise types, feature extractor backbones, UNet up/down sampling strategies, anomaly scoring formulas, loss functions, activation functions) to enhance AUROC. Achieved top-five ranking on the VisA dataset leaderboard with an AUROC close to 98%.<br/>
             <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">View Document</a>
           </p>
           <h4>Hsinchu Water Supply Network Reliability Study | Python (2023/11 - 2023/12)</h4>
           <p>
-            Applying maximum flow concepts to analyze the reliability of Hsinchu's water supply system. Real-world data on pipelines and supply capacity were collected, and the inclusion-exclusion principle was used to calculate reliability and propose future adjustments.<br/>
+            Applying maximum flow concepts and the inclusion-exclusion principle to analyze the reliability of Hsinchu's water supply system, and proposing future adjustments.<br/>
             <a href="https://docs.google.com/presentation/d/1ZTfmWpM1qE9q76aTBco2qqeOeS40OURL/edit?usp=drive_link&ouid=100131021891632475234&rtpof=true&sd=true" target="_blank">View Slides</a>
           </p>
           <h4>Deep Learning: Tesla Stock Prediction | Python (2023/11 - 2023/12)</h4>
           <p>
-            Using common stock market indicators, peer data, and open/close prices combined with sentiment scores extracted using BERT. Implementing LSTM as the core model and optimizing parameters to predict Tesla’s future stock price movements.<br/>
+            Combining market indicators, peer data, and open/close prices with sentiment scores extracted via BERT. Utilizing LSTM with parameter tuning to predict Tesla’s future stock price movements.<br/>
             <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
           <h4>NBA Player Performance Analysis | R, SAS (2022/3 - 2022/6)</h4>
           <p>
-            Utilizing official NBA statistics to conduct factor analysis, stepwise regression, and K-means clustering to classify players into optimal groups, providing insights for team management.<br/>
+            Utilizing official NBA statistics to conduct factor analysis, stepwise regression, and K-means clustering for optimal player grouping, providing insights for team management.<br/>
             <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
           <h4>Bivariate Function Plotting & Multivariable Function Parameter Estimation | Python (2022/4 - 2022/5)</h4>
           <p>
-            Simplifying complex mathematical expressions before implementing the computational program. Visualizing mixed normal estimation and comparing results from self-developed code and built-in libraries based on varying sample sizes.<br/>
+            Simplifying complex mathematical expressions before coding, visualizing mixed normal estimations, and comparing self-developed code with library functions based on varying sample sizes.<br/>
             <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">View PDF</a>
           </p>
         `,
@@ -340,8 +311,8 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
           </p>
           <p>
             <strong>Academic Achievements (Master's GPA):</strong><br/>
-            Master's Year 1 Semester 1: GPA 4.15 / 4.3<br/>
-            Master's Year 1 Semester 2: GPA 4.17 / 4.3
+            Master's Year 1: GPA 4.15 / 4.3<br/>
+            Master's Year 2: GPA 4.17 / 4.3
           </p>
           <p>
             <strong>Coursera Certificates (ongoing):</strong><br/>
@@ -356,41 +327,6 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
             <strong>Other Ongoing Learning:</strong><br/>
             Google Data Analytics Certificate, Google Ads certifications, etc.
           </p>
-        `,
-        certificates: `
-          <ul>
-            <li>Google Ads Search Certification</li>
-            <li>Google Ads Display Certification</li>
-            <li>Google Ads Video Certification</li>
-            <li>Google Shopping Ads Certification</li>
-            <li>Google Analytics Individual Qualification</li>
-            <li>Google Ads Apps Certification</li>
-            <li>Google Ads Creative Certification</li>
-            <li>AI-Powered Performance Ads Certification</li>
-            <li>Google Ads Evaluation Certification</li>
-          </ul>
-        `,
-        attachments: `
-          <ul>
-            <li>nycuitm_heng kun chou_resume.pdf</li>
-            <li>Optimizing Anomaly Detection with diffusion.docx</li>
-            <li>二晚機器學習醫療影像分類slides.pptx</li>
-            <li>第三組 dl 期末報告 預測tsla股價波動.pptx.pdf</li>
-            <li>大新竹供水系統之網路可靠度研究.pptx</li>
-            <li>交大工工所_萬用啟發式演算法_蝙蝠演算法.pdf</li>
-          </ul>
-        `,
-        additionalInfo: `
-          <p>
-            <strong>Language Skills:</strong><br/>
-            English (Listening/Intermediate, Speaking/Intermediate, Reading/Intermediate, Writing/Intermediate)<br/>
-            TOEIC: 715<br/>
-            Cambridge English: KET, PET
-          </p>
-          <p>
-            <strong>Future Plans:</strong><br/>
-            Aiming to further explore data analysis, AI, multimodal technologies, scheduling, and operations research. Open to roles in Data Engineering, Smart Manufacturing, or related fields.
-          </p>
         `
       },
       zh: {
@@ -399,16 +335,12 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
         langLabel: "語言：",
         personalInfoTitle: "個人資料",
         personalStatementTitle: "自我介紹",
-        jobPreferencesTitle: "求職條件",
         educationTitle: "學歷",
         workingExperienceTitle: "實習經歷",
         technicalSkillsTitle: "技術技能",
         competitionClubTitle: "競賽與社團經驗",
         projectsTitle: "專案",
         coursesTitle: "相關修課 / 成就",
-        certificatesTitle: "證照",
-        attachmentsTitle: "附件",
-        additionalInfoTitle: "其他資訊",
         personalInfo: `
           <ul>
             <li>中文姓名：周亨昆</li>
@@ -419,7 +351,7 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
         `,
         personalStatement: `
 <p>
-我畢業於國立臺灣師範大學附屬高中，並在國立臺北大學取得統計學位，奠定了堅實的統計方法基礎。現為國立陽明交通大學科技管理研究所碩士二年級學生，專注於影像辨識及擴散模型在異常偵測、圖像生成、物件偵測與分割方面的應用。
+我畢業於國立臺灣師範大學附屬高中，並於國立臺北大學取得統計學位，奠定了堅實的統計基礎。現為國立陽明交通大學科技管理研究所碩士二年級學生，專注於影像辨識及擴散模型在異常偵測、圖像生成、物件偵測與分割方面的應用。
 </p>
 <p>
 我的論文探討利用擴散模型進行無監督的2D/3D異常偵測，結合Stable Diffusion進行資料增強，並採用BLIP-2自動生成異常偵測報告，期望能在此領域取得突破性成果。2024年夏，我在仁寶擔任AI演算法工程師實習生，進行2D/3D異常偵測、分割及影像融合工作；自2024年12月起，我在聯發科技擔任深度學習工程師實習生，主要從事ESL訊號分析、Verilog/RTL研究及LLM在晶片設計中的整合。
@@ -427,18 +359,6 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
 <p>
 我修習了工程、管理與設計等跨領域課程，大學累積148學分，碩士已修64學分，GPA達4.16/4.3。我期望運用在人工智慧、多模態技術、資料分析及智慧製造方面的專業知識，為實際應用帶來深遠影響。
 </p>
-        `,
-        jobPreferences: `
-          <ul>
-            <li>希望從事全職工作（或研發替代役）</li>
-            <li>可配合日班、晚班、假日班及輪班</li>
-            <li>錄取後一週內可到職</li>
-            <li>待遇：依公司規定，另議</li>
-            <li>希望工作地點：台北、新北、新竹、台中、桃園</li>
-            <li>對遠端工作有意願</li>
-            <li>期望職稱：數據分析師、智慧製造工程師、資料科學家、AI工程師、數據工程師</li>
-            <li>期望產業：半導體、軟體/網路、電腦與消費性電子製造、電信、金融</li>
-          </ul>
         `,
         education: `
           <ul>
@@ -464,7 +384,7 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
           </ul>
           <h4>AI演算法工程師實習生 — 仁寶（2024/7 - 2024/8）</h4>
           <ul>
-            <li>優化主機板與生產線異常偵測（2D與3D異常偵測、語意分割、物件偵測）</li>
+            <li>優化主機板與產線異常偵測（2D與3D異常偵測、語意分割、物件偵測）</li>
             <li>研究擴散模型、Transformer及Anomalib以提升偵測準確率</li>
           </ul>
         `,
@@ -473,7 +393,7 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
             <strong>語言：</strong>中文、英文（TOEIC 715，劍橋PET及KET認證）
           </p>
           <p>
-            <strong>程式語言/工具：</strong>Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, Lingo, C#, Cplex, Gurobi
+            <strong>程式語言/工具：</strong>Python, R, SAS, Linux, GitHub, Git, Power BI, Tableau, Lingo, Cplex, Gurobi
           </p>
           <p>
             <strong>軟體：</strong>Word, Excel, PowerPoint
@@ -509,11 +429,11 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
           </p>
           <h4>擴散模型研究 | Python（2023/11 - 至今）</h4>
           <p>
-            以DDPM論文為起點，探討降噪過程及UNet架構改進，並研究擴散模型在異常偵測、超解析度和影像修復上的應用。
+            以DDPM論文為起點，探討降噪過程及UNet架構改進，並研究擴散模型在異常偵測、超解析度及影像修復上的應用。
           </p>
           <h4>優化異常偵測 | Python, Linux（2023/11 - 2024/1）</h4>
           <p>
-            基於「Anomaly Detection with Conditioned Denoising Diffusion Models」論文，針對上噪種類、特徵擷取器、UNet上下採樣策略、異常分數公式、損失函數及殘差塊激活函數進行改良，最終在VisA資料集排行榜中取得前五，影像AUROC約98%。<br/>
+            基於「Anomaly Detection with Conditioned Denoising Diffusion Models」論文，針對上噪種類、特徵擷取器、UNet上下採樣策略、異常分數公式、損失函數及激活函數進行改良，最終在VisA資料集排行榜中取得前五，影像AUROC約98%。<br/>
             <a href="https://drive.google.com/file/d/10F41hK0LxDVYY6jIzEtu-iPcvLytakHK/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
           <h4>新竹供水網路可靠度研究 | Python（2023/11 - 2023/12）</h4>
@@ -523,17 +443,17 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
           </p>
           <h4>深度學習：Tesla股價預測 | Python（2023/11 - 2023/12）</h4>
           <p>
-            結合常見市場指標、同業數據及開收盤價，並利用BERT提取新聞情緒分數，以LSTM為核心模型進行參數優化，預測特斯拉未來股價走勢。<br/>
+            結合市場指標、同業數據及開收盤價，利用BERT提取新聞情緒分數，並以LSTM進行參數優化，預測特斯拉未來股價走勢。<br/>
             <a href="https://drive.google.com/file/d/1DqUN7SlM_QszgePog1-fdJo5cGXLIWKq/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
           <h4>NBA球員表現分析 | R, SAS（2022/3 - 2022/6）</h4>
           <p>
-            利用NBA官方統計數據，通過因素分析、逐步迴歸及K-means分群對球員進行分類，為球隊管理提供參考。<br/>
+            利用NBA官方統計數據，透過因素分析、逐步迴歸及K-means分群將球員分類，為球隊管理提供參考。<br/>
             <a href="https://drive.google.com/file/d/1A1PDyk7RQIAXT6OM9K1lpD7nhk4s4V0j/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
           <h4>雙變量函數繪圖 & 多變量函數參數估計 | Python（2022/4 - 2022/5）</h4>
           <p>
-            先將複雜數學表達式簡化，再撰寫程式進行計算，將混合常態估計結果可視化，並比較自寫程式與現成函式庫在不同樣本量下的表現差異。<br/>
+            將複雜數學式簡化後撰寫程式，將混合常態估計結果可視化，並比較自寫程式與函式庫在不同樣本量下的表現差異。<br/>
             <a href="https://drive.google.com/file/d/1P-kdp8TWzXGjjpafmpT1jRvRJfb9U4Rg/view?usp=drive_link" target="_blank">檔案連結</a>
           </p>
         `,
@@ -564,41 +484,6 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
             <strong>其他進修中：</strong><br/>
             Google Data Analytics、Google Ads 認證等。
           </p>
-        `,
-        certificates: `
-          <ul>
-            <li>Google Ads Search Certification</li>
-            <li>Google Ads Display Certification</li>
-            <li>Google Ads Video Certification</li>
-            <li>Google Shopping Ads Certification</li>
-            <li>Google Analytics Individual Qualification</li>
-            <li>Google Ads Apps Certification</li>
-            <li>Google Ads Creative Certification</li>
-            <li>AI-Powered Performance Ads Certification</li>
-            <li>Google Ads Evaluation Certification</li>
-          </ul>
-        `,
-        attachments: `
-          <ul>
-            <li>nycuitm_heng kun chou_resume.pdf</li>
-            <li>Optimizing Anomaly Detection with diffusion.docx</li>
-            <li>二晚機器學習醫療影像分類slides.pptx</li>
-            <li>第三組 dl 期末報告 預測tsla股價波動.pptx.pdf</li>
-            <li>大新竹供水系統之網路可靠度研究.pptx</li>
-            <li>交大工工所_萬用啟發式演算法_蝙蝠演算法.pdf</li>
-          </ul>
-        `,
-        additionalInfo: `
-          <p>
-            <strong>語文能力：</strong><br/>
-            英文（聽/中等、說/中等、讀/中等、寫/中等）<br/>
-            TOEIC: 715<br/>
-            劍橋英語：KET, PET
-          </p>
-          <p>
-            <strong>未來規劃：</strong><br/>
-            希望能在資料分析、人工智慧、多模態技術、排程與作業研究等領域持續學習與貢獻，並從事資料工程、智慧製造等相關工作。
-          </p>
         `
       }
     };
@@ -617,30 +502,22 @@ I’ve taken interdisciplinary courses in engineering, management, and design, c
       // 各區塊標題
       document.getElementById("personal-info-title").textContent = d.personalInfoTitle;
       document.getElementById("personal-statement-title").textContent = d.personalStatementTitle;
-      document.getElementById("job-preferences-title").textContent = d.jobPreferencesTitle;
       document.getElementById("education-title").textContent = d.educationTitle;
       document.getElementById("working-experience-title").textContent = d.workingExperienceTitle;
       document.getElementById("technical-skills-title").textContent = d.technicalSkillsTitle;
       document.getElementById("competition-club-title").textContent = d.competitionClubTitle;
       document.getElementById("projects-title").textContent = d.projectsTitle;
       document.getElementById("courses-title").textContent = d.coursesTitle;
-      document.getElementById("certificates-title").textContent = d.certificatesTitle;
-      document.getElementById("attachments-title").textContent = d.attachmentsTitle;
-      document.getElementById("additional-info-title").textContent = d.additionalInfoTitle;
       
       // 各區塊內容
       document.getElementById("personal-info").innerHTML = d.personalInfo;
       document.getElementById("personal-statement").innerHTML = d.personalStatement;
-      document.getElementById("job-preferences").innerHTML = d.jobPreferences;
       document.getElementById("education").innerHTML = d.education;
       document.getElementById("working-experience").innerHTML = d.workingExperience;
       document.getElementById("technical-skills").innerHTML = d.technicalSkills;
       document.getElementById("competition-club").innerHTML = d.competitionClub;
       document.getElementById("projects").innerHTML = d.projects;
       document.getElementById("courses").innerHTML = d.courses;
-      document.getElementById("certificates").innerHTML = d.certificates;
-      document.getElementById("attachments").innerHTML = d.attachments;
-      document.getElementById("additional-info").innerHTML = d.additionalInfo;
     }
     
     // 預設顯示英文版本
